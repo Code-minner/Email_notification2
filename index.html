@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Your Connection Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        :root {
+            --primary_color: #ffffff;
+            --secondary_color: #000000;
+            --tertiary_color: #b60824;
+            --light_gray: rgba(190, 186, 186, 0.24);
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 0px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .container_sub {
+            padding: 10px 20px;
+        }
+
+        .header {
+            padding: 20px 0 30px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            gap: 5px;
+            position: relative;
+        }
+
+        .header::after {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 4px;
+            bottom: 0;
+            background-color: var(--tertiary_color);
+        }
+
+        .header img {
+            width: 80px;
+        }
+
+        .header h1 {
+            color: #050505;
+            font-size: 2.2em;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .greetings {
+            margin: 10px 0 0;
+            padding: 20px 0px 0;
+        }
+
+        .greetings span {
+            font-size: 1em;
+            color: var(--tertiary_color);
+            margin: 10px 10px 20px;
+            font-weight: bold;
+        }
+
+        .greetings h2 {
+            font-size: 2.2em;
+            font-size: 400;
+            margin-left: 10px;
+        }
+
+        .greetings h2 span {
+            color: var(--tertiary_color);
+        }
+
+        .greetings p {
+            font-size: 1.1em;
+            width: 100%;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .button {
+            margin: 20px 10px;
+        }
+
+        .button a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--primary_color);
+            color: var(--secondary_color);
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.192);
+        }
+
+        .button a:hover {
+            background-color: #fdeaee;
+        }
+
+        .button a i {
+            font-size: 1.4em;
+            padding: 5px;
+            color: var(--tertiary_color);
+        }
+
+        .bg_img {
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+        }
+
+        .text {
+            width: 100%;
+        }
+
+        .text_sub {
+            padding-top: 10px;
+        }
+
+        .text_sub h2 {
+            font-size: 1.5em;
+            padding-bottom: 5px;
+            letter-spacing: 1.4px;
+            position: relative;
+        }
+
+        .text_sub h2::after {
+            content: "";
+            position: absolute;
+            width: 10%;
+            height: 3px;
+            border-radius: 9px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--tertiary_color);
+        }
+
+
+        .text_sub h3 {
+            font-size: 1.5em;
+            padding-bottom: 5px;
+            letter-spacing: 1.4px;
+            position: relative;
+        }
+
+        .text_sub p {
+            font-size: 1.2em;
+            letter-spacing: 1.2px;
+
+        }
+
+        .features {
+            padding: 20px;
+            position: relative;
+        }
+
+        .feature::after {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 4px;
+            top: 0;
+            left: 0;
+            background-color: var(--tertiary_color);
+        }
+
+        .features h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 20px;
+
+            font-weight: 600;
+        }
+
+        .feature {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            text-align: left;
+            gap: 15px;
+        }
+
+        .feature img {
+            width: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature img:hover {
+            transform: scale(1.1);
+        }
+
+        .feature strong {
+            font-size: 1.2em;
+            letter-spacing: 0.5px;
+            color: var(--tertiary_color);
+        }
+
+        .feature p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .bg_img2 {
+            width: 100%;
+            height: 40vh;
+            object-fit: cover;
+        }
+
+        .connect {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .connect h3 {
+            font-size: 1.4em;
+            letter-spacing: 1.2px;
+        }
+
+        .connect p {
+            font-size: 1em;
+            letter-spacing: 1.2px;
+        }
+
+        .download_buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .play-store-button img,
+        .app-store-button img {
+            height: 60px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .play-store-button img:hover,
+        .app-store-button img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            width: auto;
+            padding: 20px 20px;
+            background-color: var(--light_gray);
+            margin: auto;
+        }
+
+        .footer_sub {
+            width: 100%;
+            text-align: center;
+        }
+
+        .footer_sub ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .footer_sub ul li a {
+            font-size: 2.5em;
+            color: var(--secondary_color);
+        }
+
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-link {
+            color: var(--secondary_color);
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        .footer-legal {
+            font-size: 1.1em;
+            color: var(--secondary_color);
+            line-height: 1.5;
+            letter-spacing: 1.2px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-legal p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="container_sub">
+            <!-- Header -->
+            <div class="header">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiZeNDhhvJfDyhQQMk4EatWar3OxbqT03uU127uJVNh8Ir_FhoxMODlvq5hPqpq3HnwK4KRCgrvveklv5mTFMOrtjsgdp-DDZGKeb2t774myR-7V_Hxix0ckW-lFY5WXx5I0QusQsA1AOJmR_c5wlfG0rO86bTOijfppFHrPV_Ef3nZb6M6i4zMOTZP2CQ"
+                    alt="Company Logo">
+                <h1>Prosplug</h1>
+            </div>
+
+            <!-- Greetings -->
+            <div class="greetings">
+                <span>Your Gateway to Trusted Connections</span>
+                <h2>Discover Reliable <span>Connections</span> Anytime, Anywhere, and Achieve More</h2>
+
+                <img src="https://img.freepik.com/free-vector/people-holding-connected-copy-space-circle-icons_53876-66230.jpg"
+                    alt="" class="bg_img">
+            </div>
+
+            <div class="text">
+
+                <div class="text_sub">
+
+                    <h2>Dear Frist Name</h2>
+
+                    <h3>Your Connection Hub Awaits</h3>
+
+                    <p>Welcome to Prosplug – a platform designed to connect you with the right services and
+                        professionals
+                        whenever and wherever you need them. Whether you're looking for help or offering expertise, we
+                        make
+                        it easy to connect, collaborate, and succeed.</p>
+
+                    <div class="button">
+                        <a href="#">Get Started<i class='bx bx-right-arrow-alt'></i>
+
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="features">
+                <h3>Unlock the Benefits of Our Platform</h3>
+                <div class="feature">
+                    <img src="https://connected.co.za/images/webp/Header_Image_-_Instant_Access_Slider_1.webp"
+                        alt="Search Icon">
+                    <span>
+                        <strong>Instant Access</strong>
+                        <p>Quickly find trusted services and professionals in your area with just a few clicks.</p>
+                    </span>
+                </div>
+                <div class="feature">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwnPMngMVtEcd6BWZP6YjW4DWUIOJpRKUYjg&s"
+                        alt="Connect Icon">
+                    <span>
+                        <strong>Seamless Communication</strong>
+                        <p>Negotiate and finalize agreements directly on our platform without hassles.</p>
+                    </span>
+                </div>
+                <div class="feature">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-G55napewZj-84RyUCtzQzHYXWfKeRB1akA&s"
+                        alt="Notifications Icon">
+                    <span>
+                        <strong>Stay Informed</strong>
+                        <p>Get real-time updates on your projects, agreements, and service schedules.</p>
+                    </span>
+                </div>
+            </div>
+
+            <img src="https://www.openaccessgovernment.org/wp-content/uploads/2020/08/dreamstime_l_183453423.jpg" alt=""
+                class="bg_img2">
+
+            <div class="connect">
+                <h3>Download the Prosplus App now</h3>
+                <p>Stay connected on the go!</p>
+
+                <div class="download_buttons">
+
+                    <a href="https://play.google.com/store" class="play-store-button" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                            alt="Download on Google Play">
+                    </a>
+                    <a href="https://www.apple.com/app-store/" class="app-store-button" target="_blank">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                            alt="Download on the App Store">
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer>
+
+            <div class="footer_sub">
+
+                <ul>
+
+                    <li>
+
+                        <a href="https://youtube.com/@mathsmagic-a?si=dEvQrQA_d09TDVGA"><i
+                                class='bx bxl-youtube'></i></a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/fagbenro-timileyin-528b5b1b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                class='bx bxl-linkedin'></i></a>
+                    </li>
+
+                    <li>
+                        <a href="https://x.com/afrika_math?t=6odoFbI6JoDjEAoCxUEKZQ&s=08"><i
+                                class='bx bxl-twitter'></i></a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.instagram.com/afrika_kunmi?igsh=OThlNmJ2MHBiNWx0" target="_blank"><i
+                                class='bx bxl-instagram'></i></a>
+                    </li>
+
+                </ul>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">View Web Version |</a>
+                    <a href="#" class="footer-link">Email Preferences |</a>
+                    <a href="#" class="footer-link">Unsubscribe</a>
+                </div>
+
+                <!-- Legal Text -->
+                <div class="footer-legal">
+                    <p>
+                        You received this email because you are currently signed up to receive these via your preference
+                        settings. You may adjust your preferences at any time by clicking the links above.
+                    </p>
+                    <p>&copy; 2024 Prosplug, Inc.</p>
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+</body>
+
+</html>
